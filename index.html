@@ -7,23 +7,74 @@
           content="FRANZU — Graphic Designer. Portfolio coming soon.">
     <meta property="og:title" content="FRANZU — Graphic Designer">
     <meta property="og:description" content="Portfolio coming soon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400&display=swap"
+          rel="stylesheet">
+    
+    
     <title>FRANZU</title>
     <style>
         body {
             margin: 0;
-            height: 100vh;
-            background: url("backgrond.jpeg") center / contain no-repeat;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #fff;
-            font-family: system-ui, sans-serif;
+            color: #014c2b;
+            font-family: Inter, system-ui, sans-serif;
             text-align: center;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: url("backgrond.jpeg") center / cover no-repeat;
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: clamp(32px, 6vh, 96px);
+        }
+
+        .hero h1 {
+            transform: translateY(-20vh);
+            
+            font-size: clamp(64px, 12vw, 220px);
+            margin: 0;
+
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25),
+            0 12px 40px rgba(0, 0, 0, 0.35);
+
+            font-family: "Playfair Display", serif;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+
+            color: #014c2b;
+        }
+
+        .hero p {
+            transform: translateY(8vh);
+            
+            font-size: clamp(18px, 3.5vw, 32px);
+            margin: 0;
+
+            font-weight: 300;
+            letter-spacing: 0.08em;
         }
     </style>
 </head>
 <body>
     <main class="hero">
+        <h1>FRANZU</h1>
+        <p>Graphic Designer</p>
     </main>
 </body>
 </html>
